@@ -45,3 +45,7 @@ jeszczeNieWiemy = Miesiac.KWIECIEN
 function testNever(): never {
     throw new Error()
 }
+
+let mojObiekt: object = undefined
+
+// mojObiekt = 123
