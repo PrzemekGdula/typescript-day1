@@ -15,6 +15,8 @@ let krotka: [number, boolean] = [1, false];
 let krotka1: [string, boolean[]] = ['test', [true, false]]
 let krotka3: [[number, boolean], [string, boolean[]]] = [krotka, krotka1]
 
+krotka3 = undefined
+
 let miesiacRezerwacji: string = 'lipiec'
 miesiacRezerwacji = 'june'
 
@@ -25,6 +27,7 @@ if (miesiacRezerwacji === 'lipiec') {
 enum Miesiac { STYCZEN, LUTY, MARZEC, KWIECIEN, MAJ, CZERWIEC, LIPIEC, SIERPIEN, WRZESIEN, PAZDZIERNIK, LISTOPAD }
 
 let newMiesiacRezerwacji: Miesiac = Miesiac.LIPIEC
+newMiesiacRezerwacji = null
 
 if (newMiesiacRezerwacji === Miesiac.LIPIEC) {
     console.log('sukces')
@@ -34,3 +37,11 @@ let jeszczeNieWiemy: any = {}
 jeszczeNieWiemy = 123
 jeszczeNieWiemy = krotka3
 jeszczeNieWiemy = Miesiac.KWIECIEN
+
+// function test(a:number, b:Miesiac): void {
+//     return a + b;
+// }
+
+function testNever(): never {
+    throw new Error()
+}
